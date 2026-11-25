@@ -110,8 +110,6 @@ img {
   color: var(--olive);
 }
 
-/* NAVIGATION */
-
 header {
   position: absolute;
   top: 0;
@@ -170,8 +168,6 @@ nav {
   font-size: 28px;
 }
 
-/* HERO */
-
 .hero {
   min-height: 760px;
   height: 100vh;
@@ -226,8 +222,6 @@ nav {
   letter-spacing: 2px;
 }
 
-/* MARQUEE */
-
 .marquee {
   background: var(--olive);
   color: var(--cream);
@@ -250,8 +244,6 @@ nav {
 @keyframes marquee {
   to { transform: translateX(-50%); }
 }
-
-/* ABOUT */
 
 .about {
   padding: 120px 0;
@@ -296,8 +288,6 @@ nav {
   font-style: italic;
 }
 
-/* FEATURES */
-
 .features {
   padding: 75px 0;
   background: #EAE3D6;
@@ -326,8 +316,6 @@ nav {
   font-size: 13px;
   line-height: 1.8;
 }
-
-/* MENU */
 
 .menu-section {
   padding: 120px 0;
@@ -383,6 +371,7 @@ nav {
   height: 245px;
   overflow: hidden;
   position: relative;
+  background: #EAE3D6;
 }
 
 .dish-image img {
@@ -426,8 +415,6 @@ nav {
   font-size: 9px;
   letter-spacing: 2px;
 }
-
-/* CHEF SPECIAL */
 
 .special {
   background: var(--olive);
@@ -473,8 +460,6 @@ nav {
   margin-top: 9px;
 }
 
-/* GALLERY */
-
 .gallery-section { padding: 120px 0; }
 
 .gallery-grid {
@@ -489,6 +474,7 @@ nav {
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  background: #EAE3D6;
 }
 
 .gallery-item:first-child { grid-row: span 2; }
@@ -501,8 +487,6 @@ nav {
 }
 
 .gallery-item:hover img { transform: scale(1.07); }
-
-/* LIGHTBOX */
 
 .lightbox {
   display: none;
@@ -532,8 +516,6 @@ nav {
   background: none;
   border: none;
 }
-
-/* REVIEWS */
 
 .reviews {
   background: #EAE3D6;
@@ -574,8 +556,6 @@ nav {
   color: var(--muted);
   font-size: 10px;
 }
-
-/* RESERVATION */
 
 .reservation {
   padding: 120px 0;
@@ -646,8 +626,6 @@ nav {
   line-height: 1.7;
 }
 
-/* CONTACT */
-
 .contact {
   background: #EAE3D6;
   padding: 100px 0;
@@ -673,8 +651,6 @@ nav {
 }
 
 .contact-item a { color: var(--terracotta); }
-
-/* FOOTER */
 
 footer {
   background: var(--olive);
@@ -734,8 +710,6 @@ footer h4 {
   letter-spacing: 1px;
 }
 
-/* ANIMATIONS */
-
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -747,32 +721,19 @@ footer h4 {
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
-
 @media(max-width:900px) {
-  .nav-links {
-    gap: 15px;
-  }
-
+  .nav-links { gap: 15px; }
   .nav-links a { font-size: 9px; }
-
-  .about-grid,
-  .reservation-grid { gap: 40px; }
-
+  .about-grid, .reservation-grid { gap: 40px; }
   .menu-grid { grid-template-columns: repeat(2,1fr); }
-
   .gallery-grid { grid-template-columns: repeat(2,1fr); }
-
   .footer-grid { grid-template-columns: repeat(2,1fr); }
 }
 
 @media(max-width:650px) {
   header { padding: 17px 0; }
-
   .logo { font-size: 29px; }
-
   .menu-toggle { display: block; }
-
   .nav-links {
     display: none;
     position: absolute;
@@ -785,84 +746,39 @@ footer h4 {
     padding: 25px 7%;
     gap: 22px;
   }
-
   .nav-links.open { display: flex; }
-
   .nav-links a { font-size: 12px; }
-
   .nav-book { text-align: center; }
-
   .hero {
     min-height: 720px;
     height: 90vh;
     background-position: 58% center;
   }
-
   .hero h1 { font-size: 55px; }
-
   .hero p { font-size: 13px; }
-
   .hero-bottom { font-size: 8px; }
-
-  .about,
-  .menu-section,
-  .gallery-section,
-  .reservation { padding: 80px 0; }
-
-  .about-grid,
-  .reservation-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .about, .menu-section, .gallery-section, .reservation { padding: 80px 0; }
+  .about-grid, .reservation-grid { grid-template-columns: 1fr; }
   .about-images { padding-right: 25px; }
-
   .about-main { height: 390px; }
-
   .about-small { height: 180px; }
-
   .feature-grid { grid-template-columns: 1fr; gap: 35px; }
-
   .menu-grid { grid-template-columns: 1fr; }
-
   .dish-image { height: 270px; }
-
-  .special-heading {
-    flex-direction: column;
-    align-items: start;
-  }
-
+  .special-heading { flex-direction: column; align-items: start; }
   .special-grid { grid-template-columns: 1fr; }
-
   .special-card img { height: 290px; }
-
-  .gallery-grid {
-    grid-template-columns: repeat(2,1fr);
-    grid-auto-rows: 160px;
-  }
-
+  .gallery-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 160px; }
   .gallery-item:first-child { grid-row: span 2; }
-
   .gallery-item:nth-child(4) { grid-column: span 1; }
-
   .review-grid { grid-template-columns: 1fr; }
-
   .reservation-image { height: 370px; }
-
   .reservation-form { grid-template-columns: 1fr; }
-
-  .form-group.full,
-  .reservation-form .btn { grid-column: auto; }
-
+  .form-group.full, .reservation-form .btn { grid-column: auto; }
   .contact-grid { grid-template-columns: 1fr; gap: 35px; }
-
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 35px 20px; }
-
   .footer-about { grid-column: 1/-1; }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
+  .footer-bottom { flex-direction: column; text-align: center; }
 }
 
 @media(prefers-reduced-motion:reduce) {
@@ -877,14 +793,10 @@ footer h4 {
 
 <body>
 
-<!-- NAVIGATION -->
-
 <header>
   <nav class="container">
     <a href="#home" class="logo">O<span>'</span>LIVA</a>
-
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-
     <div class="nav-links" id="navLinks">
       <a href="#home">HOME</a>
       <a href="#about">ABOUT US</a>
@@ -897,32 +809,21 @@ footer h4 {
   </nav>
 </header>
 
-<!-- HERO -->
-
 <section class="hero" id="home">
   <div class="container hero-content reveal">
     <div class="eyebrow">BENVENUTI A O'LIVA · AUTHENTIC ITALIAN CUISINE</div>
-
     <h1>A Taste of Italy,<br>A <em>Moment</em> to Remember.</h1>
-
-    <p>
-      Discover authentic Italian flavors, handcrafted dishes,
-      fine wines, and unforgettable moments at O'LIVA.
-    </p>
-
+    <p>Discover authentic Italian flavors, handcrafted dishes, fine wines, and unforgettable moments at O'LIVA.</p>
     <div class="hero-buttons">
       <a href="#menu" class="btn btn-dark">EXPLORE OUR MENU →</a>
       <a href="#reservation" class="btn btn-light">RESERVE A TABLE</a>
     </div>
   </div>
-
   <div class="hero-bottom">
     <span>MADE WITH LOVE IN ITALIAN TRADITION</span>
     <span>SCROLL TO DISCOVER ↓</span>
   </div>
 </section>
-
-<!-- MARQUEE -->
 
 <div class="marquee">
   <div class="marquee-track">
@@ -937,45 +838,22 @@ footer h4 {
   </div>
 </div>
 
-<!-- ABOUT -->
-
 <section class="about" id="about">
   <div class="container about-grid">
     <div class="about-images reveal">
-      <img class="about-main"
-        src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=85"
-        alt="Elegant Italian restaurant interior">
-      <img class="about-small"
-        src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=85"
-        alt="Fresh handmade Italian pasta">
+      <img class="about-main" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=85" alt="Elegant Italian restaurant interior">
+      <img class="about-small" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=85" alt="Fresh handmade Italian pasta">
     </div>
-
     <div class="about-copy reveal">
       <div class="eyebrow">LA NOSTRA STORIA</div>
-
       <h2 class="section-title">More Than a Restaurant. A Little Piece of Italy.</h2>
-
-      <p class="section-text">
-        At O'LIVA, we believe that great food brings people together.
-        Inspired by the traditions of Italian cuisine, we celebrate
-        fresh ingredients, handmade recipes, rich flavors, and the
-        simple beauty of sharing a meal.
-      </p>
-
-      <p class="section-text">
-        From our carefully prepared pasta to our wood-fired pizzas
-        and irresistible desserts, every dish tells a story of
-        passion, tradition, and love for Italian food.
-      </p>
-
+      <p class="section-text">At O'LIVA, we believe that great food brings people together. Inspired by the traditions of Italian cuisine, we celebrate fresh ingredients, handmade recipes, rich flavors, and the simple beauty of sharing a meal.</p>
+      <p class="section-text">From our carefully prepared pasta to our wood-fired pizzas and irresistible desserts, every dish tells a story of passion, tradition, and love for Italian food.</p>
       <a href="#contact" class="btn btn-dark">DISCOVER OUR STORY →</a>
-
       <div class="about-note">"La vita è bella. Especially around the table."</div>
     </div>
   </div>
 </section>
-
-<!-- FEATURES -->
 
 <section class="features">
   <div class="container feature-grid">
@@ -984,13 +862,11 @@ footer h4 {
       <h3>Fresh Ingredients</h3>
       <p>Carefully selected ingredients and seasonal flavors in every dish.</p>
     </div>
-
     <div class="reveal">
       <div class="feature-icon">🍝</div>
       <h3>Handmade with Love</h3>
       <p>Traditional recipes prepared with passion and attention to detail.</p>
     </div>
-
     <div class="reveal">
       <div class="feature-icon">🍷</div>
       <h3>Italian Hospitality</h3>
@@ -998,8 +874,6 @@ footer h4 {
     </div>
   </div>
 </section>
-
-<!-- MENU -->
 
 <section class="menu-section" id="menu">
   <div class="container">
@@ -1021,12 +895,8 @@ footer h4 {
 
     <div class="menu-grid" id="menuGrid">
 
-      <!-- ANTIPASTI -->
-
       <article class="dish-card" data-category="antipasti">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=700&q=85" alt="Bruschetta">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=700&q=85" alt="Bruschetta"></div>
         <div class="dish-info">
           <span class="dish-category">ANTIPASTI</span>
           <div class="dish-top"><h3>Bruschetta al Pomodoro</h3><span class="dish-price">€9</span></div>
@@ -1035,9 +905,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="antipasti">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=700&q=85" alt="Burrata">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=700&q=85" alt="Burrata"></div>
         <div class="dish-info">
           <span class="dish-category">ANTIPASTI</span>
           <div class="dish-top"><h3>Burrata e Pomodorini</h3><span class="dish-price">€14</span></div>
@@ -1046,9 +914,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="antipasti">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=85" alt="Caprese salad">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=85" alt="Caprese salad"></div>
         <div class="dish-info">
           <span class="dish-category">ANTIPASTI</span>
           <div class="dish-top"><h3>Caprese Salad</h3><span class="dish-price">€12</span></div>
@@ -1057,9 +923,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="antipasti">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=700&q=85" alt="Fried calamari">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=700&q=85" alt="Fried calamari"></div>
         <div class="dish-info">
           <span class="dish-category">ANTIPASTI</span>
           <div class="dish-top"><h3>Calamari Fritti</h3><span class="dish-price">€15</span></div>
@@ -1067,12 +931,8 @@ footer h4 {
         </div>
       </article>
 
-      <!-- PASTA -->
-
       <article class="dish-card" data-category="pasta">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=700&q=85" alt="Spaghetti Carbonara">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=700&q=85" alt="Spaghetti Carbonara"></div>
         <div class="dish-info">
           <span class="dish-category">PASTA</span>
           <div class="dish-top"><h3>Spaghetti Carbonara</h3><span class="dish-price">€18</span></div>
@@ -1081,9 +941,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="pasta">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=85" alt="Truffle pasta">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=85" alt="Truffle pasta"></div>
         <div class="dish-info">
           <span class="dish-category">PASTA</span>
           <div class="dish-top"><h3>Tagliatelle al Tartufo</h3><span class="dish-price">€24</span></div>
@@ -1092,9 +950,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="pasta">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?auto=format&fit=crop&w=700&q=85" alt="Penne pasta">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?auto=format&fit=crop&w=700&q=85" alt="Penne pasta"></div>
         <div class="dish-info">
           <span class="dish-category">PASTA</span>
           <div class="dish-top"><h3>Penne alla Vodka</h3><span class="dish-price">€17</span></div>
@@ -1103,9 +959,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="pasta">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=700&q=85" alt="Ravioli">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=700&q=85" alt="Ravioli"></div>
         <div class="dish-info">
           <span class="dish-category">PASTA</span>
           <div class="dish-top"><h3>Ravioli Ricotta e Spinaci</h3><span class="dish-price">€19</span></div>
@@ -1114,9 +968,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="pasta">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=700&q=85" alt="Fettuccine">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=700&q=85" alt="Fettuccine"></div>
         <div class="dish-info">
           <span class="dish-category">PASTA</span>
           <div class="dish-top"><h3>Fettuccine Alfredo</h3><span class="dish-price">€16</span></div>
@@ -1124,12 +976,8 @@ footer h4 {
         </div>
       </article>
 
-      <!-- PIZZA -->
-
       <article class="dish-card" data-category="pizza">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=85" alt="Margherita pizza">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=85" alt="Margherita pizza"></div>
         <div class="dish-info">
           <span class="dish-category">PIZZA</span>
           <div class="dish-top"><h3>Margherita</h3><span class="dish-price">€14</span></div>
@@ -1138,9 +986,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="pizza">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=85" alt="Diavola pizza">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=85" alt="Diavola pizza"></div>
         <div class="dish-info">
           <span class="dish-category">PIZZA</span>
           <div class="dish-top"><h3>Diavola</h3><span class="dish-price">€17</span></div>
@@ -1149,9 +995,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="pizza">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=85" alt="Four cheese pizza">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=85" alt="Four cheese pizza"></div>
         <div class="dish-info">
           <span class="dish-category">PIZZA</span>
           <div class="dish-top"><h3>Quattro Formaggi</h3><span class="dish-price">€18</span></div>
@@ -1160,9 +1004,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="pizza">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=700&q=85" alt="Prosciutto pizza">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=700&q=85" alt="Prosciutto pizza"></div>
         <div class="dish-info">
           <span class="dish-category">PIZZA</span>
           <div class="dish-top"><h3>Prosciutto e Rucola</h3><span class="dish-price">€19</span></div>
@@ -1171,9 +1013,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="pizza">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=700&q=85" alt="Burrata pizza">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=700&q=85" alt="Burrata pizza"></div>
         <div class="dish-info">
           <span class="dish-category">PIZZA</span>
           <div class="dish-top"><h3>Burrata Pizza</h3><span class="dish-price">€20</span></div>
@@ -1181,12 +1021,8 @@ footer h4 {
         </div>
       </article>
 
-      <!-- SECONDI -->
-
       <article class="dish-card" data-category="secondi">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&w=700&q=85" alt="Chicken parmesan">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&w=700&q=85" alt="Chicken parmesan"></div>
         <div class="dish-info">
           <span class="dish-category">SECONDI</span>
           <div class="dish-top"><h3>Pollo alla Parmigiana</h3><span class="dish-price">€22</span></div>
@@ -1195,9 +1031,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="secondi">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=700&q=85" alt="Salmon">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=700&q=85" alt="Salmon"></div>
         <div class="dish-info">
           <span class="dish-category">SECONDI</span>
           <div class="dish-top"><h3>Salmon al Limone</h3><span class="dish-price">€25</span></div>
@@ -1206,9 +1040,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="secondi">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=700&q=85" alt="Mushroom risotto">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=700&q=85" alt="Mushroom risotto"></div>
         <div class="dish-info">
           <span class="dish-category">SECONDI</span>
           <div class="dish-top"><h3>Risotto ai Funghi</h3><span class="dish-price">€20</span></div>
@@ -1217,9 +1049,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="secondi">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85" alt="Italian braised meat">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85" alt="Italian braised meat"></div>
         <div class="dish-info">
           <span class="dish-category">SECONDI</span>
           <div class="dish-top"><h3>Osso Buco</h3><span class="dish-price">€29</span></div>
@@ -1227,12 +1057,8 @@ footer h4 {
         </div>
       </article>
 
-      <!-- DOLCI -->
-
       <article class="dish-card" data-category="dolci">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=700&q=85" alt="Tiramisu">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=700&q=85" alt="Tiramisu"></div>
         <div class="dish-info">
           <span class="dish-category">DOLCI</span>
           <div class="dish-top"><h3>Classic Tiramisu</h3><span class="dish-price">€9</span></div>
@@ -1241,9 +1067,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="dolci">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=85" alt="Panna cotta">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=85" alt="Panna cotta"></div>
         <div class="dish-info">
           <span class="dish-category">DOLCI</span>
           <div class="dish-top"><h3>Panna Cotta</h3><span class="dish-price">€8</span></div>
@@ -1252,9 +1076,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="dolci">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=700&q=85" alt="Cannoli">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=700&q=85" alt="Cannoli"></div>
         <div class="dish-info">
           <span class="dish-category">DOLCI</span>
           <div class="dish-top"><h3>Cannoli Siciliani</h3><span class="dish-price">€8</span></div>
@@ -1263,9 +1085,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="dolci">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=85" alt="Chocolate dessert">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=85" alt="Chocolate dessert"></div>
         <div class="dish-info">
           <span class="dish-category">DOLCI</span>
           <div class="dish-top"><h3>Chocolate Fondant</h3><span class="dish-price">€10</span></div>
@@ -1273,12 +1093,8 @@ footer h4 {
         </div>
       </article>
 
-      <!-- DRINKS -->
-
       <article class="dish-card" data-category="drinks">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=700&q=85" alt="Italian red wine">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=700&q=85" alt="Italian red wine"></div>
         <div class="dish-info">
           <span class="dish-category">VINI & DRINKS</span>
           <div class="dish-top"><h3>Chianti Classico</h3><span class="dish-price">€12</span></div>
@@ -1287,9 +1103,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="drinks">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=700&q=85" alt="Italian white wine">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=700&q=85" alt="Italian white wine"></div>
         <div class="dish-info">
           <span class="dish-category">VINI & DRINKS</span>
           <div class="dish-top"><h3>Pinot Grigio</h3><span class="dish-price">€10</span></div>
@@ -1298,9 +1112,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="drinks">
-        <div class="dish-image">
-          <img src="https://cdn.shopify.com/s/files/1/0757/2389/8991/files/classic-aperol-spritz-recipe.jpg?v=1793543498" alt="Aperol spritz">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1536935338788846bb9981813?auto=format&fit=crop&w=700&q=85" alt="Aperol Spritz cocktail"></div>
         <div class="dish-info">
           <span class="dish-category">VINI & DRINKS</span>
           <div class="dish-top"><h3>Aperol Spritz</h3><span class="dish-price">€11</span></div>
@@ -1309,9 +1121,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="drinks">
-        <div class="dish-image">
-          <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=85" alt="Italian espresso">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=85" alt="Italian espresso"></div>
         <div class="dish-info">
           <span class="dish-category">VINI & DRINKS</span>
           <div class="dish-top"><h3>Italian Espresso</h3><span class="dish-price">€4</span></div>
@@ -1320,9 +1130,7 @@ footer h4 {
       </article>
 
       <article class="dish-card" data-category="drinks">
-        <div class="dish-image">
-          <img src="https://cdn.shopify.com/s/files/1/0757/2389/8991/files/Pale_Fox_Prosecco.webp?v=1793546593" alt="Prosecco">
-        </div>
+        <div class="dish-image"><img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=700&q=85" alt="Prosecco bottles in ice buckets"></div>
         <div class="dish-info">
           <span class="dish-category">VINI & DRINKS</span>
           <div class="dish-top"><h3>Prosecco</h3><span class="dish-price">€11</span></div>
@@ -1334,8 +1142,6 @@ footer h4 {
   </div>
 </section>
 
-<!-- CHEF SPECIALS -->
-
 <section class="special">
   <div class="container">
     <div class="special-heading reveal">
@@ -1343,24 +1149,19 @@ footer h4 {
         <div class="eyebrow">DAL NOSTRO CHEF</div>
         <h2 class="section-title">Made with Passion.<br>Served with Love.</h2>
       </div>
-      <p class="section-text" style="color:#D8D6CC;max-width:300px">
-        Discover the dishes that capture the heart and soul of our kitchen.
-      </p>
+      <p class="section-text" style="color:#D8D6CC;max-width:300px">Discover the dishes that capture the heart and soul of our kitchen.</p>
     </div>
-
     <div class="special-grid">
       <div class="special-card reveal">
         <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=85" alt="Truffle pasta">
         <h3>Signature Truffle Pasta</h3>
         <p>Rich, creamy and beautifully aromatic.</p>
       </div>
-
       <div class="special-card reveal">
         <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=85" alt="Burrata pizza">
         <h3>Burrata Margherita Pizza</h3>
         <p>Fresh ingredients, Italian tradition.</p>
       </div>
-
       <div class="special-card reveal">
         <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=85" alt="Tiramisu">
         <h3>Classic Italian Tiramisu</h3>
@@ -1370,8 +1171,6 @@ footer h4 {
   </div>
 </section>
 
-<!-- GALLERY -->
-
 <section class="gallery-section" id="gallery">
   <div class="container">
     <div class="center-heading reveal">
@@ -1379,26 +1178,21 @@ footer h4 {
       <h2 class="section-title">A Taste of Italy.</h2>
       <p class="section-text">A glimpse into the world of O'LIVA.</p>
     </div>
-
     <div class="gallery-grid">
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=85" alt="Italian pasta"></div>
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=85" alt="Italian pizza"></div>
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=85" alt="Italian dessert"></div>
-      <div class="gallery-item"><img src="https://cdn.shopify.com/s/files/1/0757/2389/8991/files/classic-aperol-spritz-recipe.jpg?v=1793543498" alt="Aperol Spritz cocktail"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1536935338788846bb9981813?auto=format&fit=crop&w=800&q=85" alt="Aperol Spritz cocktail"></div>
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=85" alt="Restaurant interior"></div>
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=800&q=85" alt="Italian dining"></div>
     </div>
   </div>
 </section>
 
-<!-- LIGHTBOX -->
-
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
   <img src="" alt="Enlarged gallery image" id="lightboxImage">
 </div>
-
-<!-- REVIEWS -->
 
 <section class="reviews" id="reviews">
   <div class="container">
@@ -1407,7 +1201,6 @@ footer h4 {
       <h2 class="section-title">Stories Shared Around the Table.</h2>
       <p class="section-text">Every visit creates a beautiful memory.</p>
     </div>
-
     <div class="review-grid">
       <article class="review-card reveal">
         <div class="stars">★★★★★</div>
@@ -1415,14 +1208,12 @@ footer h4 {
         <h4>Alexandra M.</h4>
         <small>Sample testimonial</small>
       </article>
-
       <article class="review-card reveal">
         <div class="stars">★★★★★</div>
         <p>"Beautiful Italian food, warm hospitality and wonderful flavors. A perfect place for a lovely evening."</p>
         <h4>Daniel R.</h4>
         <small>Sample testimonial</small>
       </article>
-
       <article class="review-card reveal">
         <div class="stars">★★★★★</div>
         <p>"The tiramisu was absolutely amazing. I loved the cozy atmosphere and the attention to every little detail."</p>
@@ -1433,41 +1224,28 @@ footer h4 {
   </div>
 </section>
 
-<!-- RESERVATION -->
-
 <section class="reservation" id="reservation">
   <div class="container reservation-grid">
     <div class="reveal">
-      <img class="reservation-image"
-        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85"
-        alt="Romantic restaurant dining atmosphere">
+      <img class="reservation-image" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85" alt="Romantic restaurant dining atmosphere">
     </div>
-
     <div class="reveal">
       <div class="eyebrow">PRENOTA UN TAVOLO</div>
       <h2 class="section-title">Your Table Is Waiting.</h2>
-
-      <p class="section-text" style="margin-top:20px">
-        Whether it's a romantic dinner, a family gathering, or a special celebration,
-        we'd love to welcome you to O'LIVA.
-      </p>
-
+      <p class="section-text" style="margin-top:20px">Whether it's a romantic dinner, a family gathering, or a special celebration, we'd love to welcome you to O'LIVA.</p>
       <form class="reservation-form" id="reservationForm">
         <div class="form-group">
           <label for="name">FULL NAME *</label>
           <input id="name" name="name" type="text" placeholder="Your name" required>
         </div>
-
         <div class="form-group">
           <label for="email">EMAIL ADDRESS *</label>
           <input id="email" name="email" type="email" placeholder="Your email" required>
         </div>
-
         <div class="form-group">
           <label for="phone">PHONE NUMBER</label>
           <input id="phone" name="phone" type="tel" placeholder="+00 000 000 000">
         </div>
-
         <div class="form-group">
           <label for="guests">NUMBER OF GUESTS *</label>
           <select id="guests" name="guests" required>
@@ -1481,12 +1259,10 @@ footer h4 {
             <option>7+ Guests</option>
           </select>
         </div>
-
         <div class="form-group">
           <label for="date">DATE *</label>
           <input id="date" name="date" type="date" required>
         </div>
-
         <div class="form-group">
           <label for="time">PREFERRED TIME *</label>
           <select id="time" name="time" required>
@@ -1502,21 +1278,16 @@ footer h4 {
             <option>9:00 PM</option>
           </select>
         </div>
-
         <div class="form-group full">
           <label for="requests">SPECIAL REQUESTS</label>
           <textarea id="requests" name="requests" placeholder="Tell us something special..."></textarea>
         </div>
-
         <button type="submit" class="btn btn-dark">BOOK YOUR TABLE →</button>
-
         <p id="form-message" aria-live="polite"></p>
       </form>
     </div>
   </div>
 </section>
-
-<!-- CONTACT -->
 
 <section class="contact" id="contact">
   <div class="container">
@@ -1525,13 +1296,11 @@ footer h4 {
       <h2 class="section-title">Find Your Way to O'LIVA.</h2>
       <p class="section-text">We look forward to welcoming you.</p>
     </div>
-
     <div class="contact-grid">
       <div class="contact-item reveal">
         <h3>Visit Us</h3>
         <p>123 Italian Street<br>Rome, Italy<br><small>Sample address — edit before publishing.</small></p>
       </div>
-
       <div class="contact-item reveal">
         <h3>Say Hello</h3>
         <p>
@@ -1539,7 +1308,6 @@ footer h4 {
           <a href="mailto:hello@oliva-restaurant.com">hello@oliva-restaurant.com</a>
         </p>
       </div>
-
       <div class="contact-item reveal">
         <h3>Opening Hours</h3>
         <p>
@@ -1552,20 +1320,13 @@ footer h4 {
   </div>
 </section>
 
-<!-- FOOTER -->
-
 <footer>
   <div class="container">
     <div class="footer-grid">
-
       <div class="footer-about">
         <div class="footer-logo">O'LIVA</div>
-        <p>
-          Authentic Italian cuisine, thoughtfully prepared and
-          beautifully served. A little piece of Italy, wherever you are.
-        </p>
+        <p>Authentic Italian cuisine, thoughtfully prepared and beautifully served. A little piece of Italy, wherever you are.</p>
       </div>
-
       <div>
         <h4>Explore</h4>
         <div class="footer-links">
@@ -1576,7 +1337,6 @@ footer h4 {
           <a href="#reservation">Reservations</a>
         </div>
       </div>
-
       <div>
         <h4>Find Us</h4>
         <div class="footer-links">
@@ -1585,7 +1345,6 @@ footer h4 {
           <a href="tel:+39000000000">Call Us</a>
         </div>
       </div>
-
       <div>
         <h4>Follow Us</h4>
         <div class="footer-links">
@@ -1594,9 +1353,7 @@ footer h4 {
           <p>Good Food. Good Wine.<br>Great Company.</p>
         </div>
       </div>
-
     </div>
-
     <div class="footer-bottom">
       <span>© 2026 O'LIVA. ALL RIGHTS RESERVED.</span>
       <span>MADE WITH LOVE & ITALIAN PASSION ♡</span>
@@ -1605,8 +1362,6 @@ footer h4 {
 </footer>
 
 <script>
-// MOBILE NAVIGATION
-
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 
@@ -1624,18 +1379,14 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-// MENU CATEGORY FILTERS
-
 const filterButtons = document.querySelectorAll('.filter-btn');
 const dishes = document.querySelectorAll('.dish-card');
 
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
     const filter = button.dataset.filter;
-
     filterButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
-
     dishes.forEach(dish => {
       dish.style.display =
         filter === 'all' || dish.dataset.category === filter
@@ -1644,8 +1395,6 @@ filterButtons.forEach(button => {
     });
   });
 });
-
-// GALLERY LIGHTBOX
 
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightboxImage');
@@ -1670,39 +1419,27 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') lightbox.classList.remove('open');
 });
 
-// RESERVATION FORM
-
 const dateInput = document.getElementById('date');
-
 const today = new Date();
 const localToday = new Date(
   today.getTime() - today.getTimezoneOffset() * 60000
 ).toISOString().split('T')[0];
-
 dateInput.min = localToday;
 
 document.getElementById('reservationForm').addEventListener('submit', e => {
   e.preventDefault();
-
   const form = e.currentTarget;
   const message = document.getElementById('form-message');
-
   if (!form.checkValidity()) {
     form.reportValidity();
     return;
   }
-
   const formData = new FormData(form);
   const name = formData.get('name');
-
-  message.textContent =
-    `Thank you, ${name}! Your reservation request has been prepared. Please contact the restaurant to confirm your booking.`;
-
+  message.textContent = `Thank you, ${name}! Your reservation request has been prepared. Please contact the restaurant to confirm your booking.`;
   form.reset();
   dateInput.min = localToday;
 });
-
-// SCROLL REVEAL ANIMATIONS
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
